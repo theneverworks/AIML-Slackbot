@@ -1,6 +1,8 @@
 # DISCLAIMER: 
 I did not personally write many of the components that I am using. I am standing on the shoulders of many other’s fine work. I’ve merely created an orchestration that I wish to share.
 
+# What or who, is Sam?
+
 Sam is a new twist on an old favorite. The use of the Py-AIML interpreter (not written by me) to add personality to a command capable Slackbot using Matt Makai’s mattmakai/slack-starterbot. Sounds simple, but the extendibility of Python and the availability of Slack means from you browser, phone, or desktop app, you can control, check and execute anything. Share the output of commands, directly with your team or family. The AIML-Slackbot is intended to leverage the power of Slack as a delivery medium for teams, personal and professional.
 
 # History
