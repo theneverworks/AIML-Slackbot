@@ -19,6 +19,22 @@ He or she has the ability to;
   * Execute builds from Microsoft Team Foundation Server utilizing the [Microsoft](https://github.com/Microsoft "Microsoft")/[tfs-cli](https://github.com/Microsoft/tfs-cli "tfs-cli") tool
   * Locate my bus is utilizing the GTFS feed from my local city
   * Perform health checks on ArcGIS Server
+  * Call a web service or URL to GET or POST data
+  * Look up a song
+  * Ask the Wolfram|Alpha Super Computer Cluster a question
+  * Pull a random gif from GIPHY using [shaunduncan](https://github.com/shaunduncan "shaunduncan")/[giphypop](https://github.com/shaunduncan/giphypop "giphypop")
+  * Start/Stop/Restart services on another machine
+  * Check the status of a service on another machine
+  * List open files on your web server
+  * List logins on your servers
+  * Query your help desk(s)
+  * Query your monitoring solution(s)
+  * Query data from a database
+  * Query data from Elasticsearch
+  * Control or query your IoT devices
+  * Interface with an alarm system
+
+Anything you can script, you can enable for yourself, your team or your family and friends.
 
 # History
 
