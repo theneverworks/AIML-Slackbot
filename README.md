@@ -1,6 +1,14 @@
 # DISCLAIMER: 
 I did not personally write many of the components that I am using. I am standing on the shoulders of many other’s fine work. I’ve merely created an orchestration that I wish to share.
 
+Based on the slack-starterbot
+author: Matt Makai (matthew.makai@gmail.com) web: http://www.mattmakai.com/
+https://www.fullstackpython.com/blog/build-first-slack-bot-python.html
+
+Based on the Py-AIML or PyAIML or pyAIML interpreter currently cloned by creatorrr
+author: Cort Stratton (cort@users.sourceforge.net) web: http://pyaiml.sourceforge.net/
+https://github.com/creatorrr/pyAIML
+
 # What or who, is Sam?
 
 Sam is a new twist on an old favorite. The use of the Py-AIML interpreter (not written by me) to add personality to a command capable Slackbot using Matt Makai’s mattmakai/slack-starterbot. Sounds simple, but the extendibility of Python and the availability of Slack means from you browser, phone, or desktop app, you can control, check and execute anything. Share the output of commands, directly with your team or family. The AIML-Slackbot is intended to leverage the power of Slack as a delivery medium for teams, personal and professional.
@@ -20,3 +28,13 @@ Before you begin, you’ll need to install some required modules. I recommend ut
 I am or have successfully deployed Sam on Windows Server 2012, Windows 10, Windows 8.1, Windows 7, Raspbian Jessie, Raspbian Wheezy, Ubuntu 14.04 LTS, and Ubuntu 16.04 LTS. Using Python 2.7.8 through 2.7.13.
 
 I have not tested on Python 3.x.
+
+Linux:
+```
+pip install SlackClient
+```
+
+Windows:
+```
+python -m pip install SlackClient
+```
