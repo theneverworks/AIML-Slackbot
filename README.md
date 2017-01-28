@@ -23,11 +23,15 @@ I had the idea of wiring the two together after reading a great article on Full 
 
 # Installation and Dependencies
 
-Before you begin, you’ll need to install some required modules. I recommend utilizing PIP especially if you have Python 2.7.9 or greater. At that release, PIP is installed by default. Depending on what you intend to use Sam for and how you deploy him, will affect the dependencies naturally.
+Before you begin, you’ll need to install some required modules. I recommend utilizing PIP especially if you have Python 2.7.9 or greater. At that release, PIP is installed by default. You can find it separately here, https://pip.pypa.io/en/stable/. Depending on what you intend to use Sam for and how you deploy him, will affect the dependencies naturally.
 
 I am or have successfully deployed Sam on Windows Server 2012, Windows 10, Windows 8.1, Windows 7, Raspbian Jessie, Raspbian Wheezy, Ubuntu 14.04 LTS, and Ubuntu 16.04 LTS. Using Python 2.7.8 through 2.7.13.
 
 I have not tested on Python 3.x.
+
+I also purchased an awesome and affordable voice model with its own engine from a company called Cepstral, http://www.cepstral.com/. With their speech engine, you can have the same voice on Windows and Linux (even the Pi). This is the engine I use in the announcement service and in any other speech synthesis components.
+
+Installing the Slack Client
 
 Linux:
 ```
