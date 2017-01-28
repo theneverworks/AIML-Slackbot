@@ -1,17 +1,24 @@
 # DISCLAIMER: 
 I did not personally write many of the components that I am using. I am standing on the shoulders of many other’s fine work. I’ve merely created an orchestration that I wish to share.
 
-Based on the slack-starterbot
+Based on the [mattmakai](https://github.com/mattmakai "mattmakai")/[slack-starterbot](https://github.com/mattmakai/slack-starterbot "slack-starterbot")
 author: Matt Makai (matthew.makai@gmail.com) web: http://www.mattmakai.com/
 https://www.fullstackpython.com/blog/build-first-slack-bot-python.html
 
-Based on the Py-AIML or PyAIML or pyAIML interpreter currently cloned by creatorrr
+Based on the Py-AIML or PyAIML or pyAIML or Program-Y interpreter currently cloned by [creatorrr](https://github.com/creatorrr "creatorrr")/[pyAIML](https://github.com/creatorrr/pyAIML "pyAIML")
 author: Cort Stratton (cort@users.sourceforge.net) web: http://pyaiml.sourceforge.net/
-https://github.com/creatorrr/pyAIML
 
 # What or who, is Sam?
 
-Sam is a new twist on an old favorite. The use of the Py-AIML interpreter (not written by me) to add personality to a command capable Slackbot using Matt Makai’s mattmakai/slack-starterbot. Sounds simple, but the extendibility of Python and the availability of Slack means from you browser, phone, or desktop app, you can control, check and execute anything. Share the output of commands, directly with your team or family. The AIML-Slackbot is intended to leverage the power of Slack as a delivery medium for teams, personal and professional.
+Sam is a new twist on an old favorite. The use of the [creatorrr](https://github.com/creatorrr "creatorrr")/[pyAIML](https://github.com/creatorrr/pyAIML "pyAIML") interpreter to add personality to a command capable Slackbot using Matt Makai’s [mattmakai](https://github.com/mattmakai "mattmakai")/[slack-starterbot](https://github.com/mattmakai/slack-starterbot "slack-starterbot"). Sounds simple, but the extendibility of Python and the availability of Slack means from you browser, phone, or desktop app, you can control, check and execute anything. Share the output of commands, directly with your team or family. The AIML-Slackbot is intended to leverage the power of Slack as a delivery medium for teams, personal and professional.
+
+Sam also utilizes Twilio to add text capability to your home or office AI. I'm currently working on his Outlook client to add direct email capability will relying on Outlook to manage security and interfacing with Exchange.
+
+He or she has the ability to;
+
+  * Execute builds from Microsoft Team Foundation Server utilizing the [Microsoft](https://github.com/Microsoft "Microsoft")/[tfs-cli](https://github.com/Microsoft/tfs-cli "tfs-cli") tool
+  * Locate my bus is utilizing the GTFS feed from my local city
+  * Perform health checks on ArcGIS Server
 
 # History
 
@@ -31,7 +38,7 @@ I have not tested on Python 3.x.
 
 I also purchased an awesome and affordable voice model with its own engine from a company called Cepstral, http://www.cepstral.com/. With their speech engine, you can have the same voice on Windows and Linux (even the Pi). This is the engine I use in the announcement service and in any other speech synthesis components.
 
-Installing the Slack Client
+## Installing the Slack Client
 
 Linux:
 ```
