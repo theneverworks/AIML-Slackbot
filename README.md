@@ -101,7 +101,6 @@ sudo pip install pika
 Windows:
 ```
 python -m pip install pika
-
 ```
 
 # Running Sam
@@ -111,7 +110,6 @@ Before Sam will run, it will need to have a few edits made.
 ## Required edits
 
 Edit slacksam.py and update the Slack bot ID to your Slackbot's name
-
 
 ```python
 AT_BOT = "<@BOT_ID>"
@@ -186,6 +184,14 @@ else:
         response = k.respond(command, "sam")
 ```
 
+# Editing AIML
+
+You can edit the AIML files or predicate file to suite your bot requirements. The bot start up is designed to detect when Sam's files have been edited or added to and recompile the brain automatically. Note, this will impact the next start up as the bot must relearn its personality.
+
+# Brain file
+
+The brain file sam.brn is a compiled and optimized binary version of the AIML files themselves. It is compiled at start up and requires shutting down Sam to update it with changes.
+
 # Screenshots
 
 ![Find movies](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15781271_1426701024030103_1004567059525791416_n.jpg?oh=5631d1209067cb55df9f627caadc013d&oe=5908590B "Find movies")
@@ -193,3 +199,7 @@ else:
 ![Who sings](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15822923_1425939330772939_373334250003504533_n.jpg?oh=91cd46fbc394a9691ee4b08a0b42edfb&oe=58FE672E "Who sings")
 
 ![Pick a movie](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15873219_1425953427438196_3489926122905296987_n.jpg?oh=cfddefdfda25b1fe39910c593ea5e2d9&oe=59157F38 "Pick a movie")
+
+# Design changes planned
+
+I'd like to connect the Slack Sam client to the separate socketed Sam Brain making them independent. Then the other clients, SMS, email, etc. can reuse the Brain process.
