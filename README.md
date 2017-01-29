@@ -65,6 +65,8 @@ I also purchased an awesome and affordable voice model with its own engine from 
 
 NOTE: Installations should be performed "as administrator" in Windows or using "sudo" in Linux.
 
+NOTE: You may have to include the full path to python if you didn't include Python in your PATH environment variables.
+
 ## Installing the required Py-AIML
 
 Linux:
