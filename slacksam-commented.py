@@ -76,7 +76,7 @@ TELLSAM_COMMAND = "announce"
 slack_client = SlackClient("SLACK_TOKEN")
 
 # WolframAlpha connection
-client = wolframalpha.Client('WOLFRAM_KEY')
+#client = wolframalpha.Client('WOLFRAM_KEY')
 
 # AIML Directory
 saiml = "/PATH/sam/aiml/"
