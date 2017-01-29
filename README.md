@@ -152,3 +152,11 @@ Windows:
 ```cmd
 C:\PATH\python slacksam.py
 ```
+
+# Screenshots
+
+![Find movies](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15781271_1426701024030103_1004567059525791416_n.jpg?oh=5631d1209067cb55df9f627caadc013d&oe=5908590B "Find movies")
+
+![Who sings](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15822923_1425939330772939_373334250003504533_n.jpg?oh=91cd46fbc394a9691ee4b08a0b42edfb&oe=58FE672E "Who sings")
+
+![Pick a movie](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15873219_1425953427438196_3489926122905296987_n.jpg?oh=cfddefdfda25b1fe39910c593ea5e2d9&oe=59157F38 "Pick a movie")
