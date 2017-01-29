@@ -63,7 +63,7 @@ I prefer RabbitMQ, the open source messaging queue https://www.rabbitmq.com/. Th
 
 I also purchased an awesome and affordable voice model with its own engine from a company called Cepstral, http://www.cepstral.com/. With their speech engine, you can have the same voice on Windows and Linux (even the Pi). This is the engine I use in the announcement service and in any other speech synthesis components.
 
-## Installing the Slack Client
+## Installing the Required Slack Client
 
 Linux:
 ```
@@ -74,6 +74,22 @@ Windows:
 ```
 python -m pip install SlackClient
 ```
+
+## Installing the Optional Pika Client (to use AMPQ messaging queues)
+
+Linux:
+```
+pip install pika
+```
+
+Windows:
+```
+python -m pip install pika
+```
+
+# Running Sam
+
+## Required edits
 
 Edit slacksam.py and update the Slack bot ID to your Slackbot's name
 
@@ -98,7 +114,8 @@ Windows:
 ```python
 saiml = "C:\\PATH\\sam\\aiml\\"
 ```
-# Running Sam
+
+## Starting Sam Up
 
 Running only the Slackbot fairly straightforward. You execute python and pass slacksam.py as an argument.
 
