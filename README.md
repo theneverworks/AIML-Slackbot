@@ -55,7 +55,7 @@ I have not tested on Python 3.x.
 
 I am utilizing Advanced Message Queuing Protocol (AMQP) https://www.amqp.org/ exchanges to route messages from various sources. Utilizing them for asynchronous messages “FROM” the bot give you a means to thread heavy processes and return results later and gives the illusion that the bot is actively performing human work. In reality, the threaded process is doing what it needs and returns the response later. We are able to feed alerts to or through the bot. Alerts can be reported to the team as though they came directly from the bot.
 
-I prefer RabbitMQ, the open source messaging queue https://www.rabbitmq.com/. The deployment, configuration, and administration of Rabbit are not part of this documentation but their website has excellent step by step examples in Python.
+I prefer RabbitMQ, the open source messaging queue https://www.rabbitmq.com/. The deployment, configuration, and administration of Rabbit are not part of this documentation but their website has excellent step by step examples in Python. RabbitMQ runs great on a RaspberryPi too.
 
 I also purchased an awesome and affordable voice model with its own engine from a company called Cepstral, http://www.cepstral.com/. With their speech engine, you can have the same voice on Windows and Linux (even the Pi). This is the engine I use in the announcement service and in any other speech synthesis components.
 
