@@ -98,3 +98,10 @@ Windows:
 ```python
 saiml = "C:\\PATH\\sam\\aiml\\"
 ```
+# Running Sam
+
+Running only the Slackbot fairly straightforward. You execute python.exe and pass slacksam.py as an argument.
+
+```cmd
+python slacksam.py
+```
