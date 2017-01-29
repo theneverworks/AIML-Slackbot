@@ -38,28 +38,10 @@ BOT_ID = "sam"
 # constants
 AT_BOT = "<@BOT_ID>"
 EXAMPLE_COMMAND = "do"
-LOOKUP_COMMAND = "look up"
-HEALTH_COMMAND = "health check"
 HELP_COMMAND = "help"
-TEMP_COMMAND = "temperature"
-PICKAMOVIE_COMMAND = "pick a movie"
-SEARCHMUSIC_COMMAND = "search music for"
-IDMUSIC_COMMAND = "who sings"
-SEARCHFILES_COMMAND = "search files for"
-SEARCHDOCS_COMMAND = "search documents for"
-PICKMUSIC_COMMAND = "pick a song"
-HOMEVALUE_COMMAND = "what is the house worth"
-APN_COMMAND = "query parcel"
-NETFLIXSEARCH_COMMAND = "search netflix for"
-THEATERSEARCH_COMMAND = "find movies near"
-GIPHY_COMMAND = "gif"
-TELLSAM_COMMAND = "announce"
 
 # instantiate Slack client
 slack_client = SlackClient("SLACK_TOKEN")
-
-# WolframAlpha connection
-client = wolframalpha.Client('WOLFRAM_KEY')
 
 # AIML Directory
 saiml = "/PATH/sam/aiml/"
