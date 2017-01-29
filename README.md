@@ -8,6 +8,10 @@ https://www.fullstackpython.com/blog/build-first-slack-bot-python.html
 Based on the Py-AIML or PyAIML or pyAIML or Program-Y interpreter currently cloned by [creatorrr](https://github.com/creatorrr "creatorrr")/[pyAIML](https://github.com/creatorrr/pyAIML "pyAIML")
 author: Cort Stratton (cort@users.sourceforge.net) web: http://pyaiml.sourceforge.net/
 
+# What is Slack?
+
+[Slack.com](https://slack.com/ "Slack.com") has a video explaining all you need to know on YouTube [What is Slack?](https://youtu.be/9RJZMSsH7-g "What is Slack?")
+
 # What or who, is Sam?
 
 Sam is a new twist on an old favorite. The use of the [creatorrr](https://github.com/creatorrr "creatorrr")/[pyAIML](https://github.com/creatorrr/pyAIML "pyAIML") interpreter to add personality to a command capable Slackbot using Matt Makai’s [mattmakai](https://github.com/mattmakai "mattmakai")/[slack-starterbot](https://github.com/mattmakai/slack-starterbot "slack-starterbot"). Sounds simple, but the extendibility of Python and the availability of Slack means from you browser, phone, or desktop app, you can control, check and execute anything. Share the output of commands, directly with your team or family. The AIML-Slackbot is intended to leverage the power of Slack as a delivery medium for teams, personal and professional.
