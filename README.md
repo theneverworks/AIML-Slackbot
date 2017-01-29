@@ -21,6 +21,7 @@ He or she has the ability to;
   * Perform health checks on ArcGIS Server
   * Call a web service or URL to GET or POST data
   * Look up a song
+  * Find a movie playing nearby
   * Ask the Wolfram|Alpha Super Computer Cluster a question
   * Pull a random gif from GIPHY using [shaunduncan](https://github.com/shaunduncan "shaunduncan")/[giphypop](https://github.com/shaunduncan/giphypop "giphypop")
   * Start/Stop/Restart services on another machine
@@ -64,4 +65,28 @@ pip install SlackClient
 Windows:
 ```
 python -m pip install SlackClient
+```
+
+Edit slacksam.py and update the Slack bot ID to your Slackbot's name
+
+```python
+AT_BOT = "<@BOT_ID>"
+```
+
+Edit slacksam.py and update the Slack token to your Slack team's token
+
+```python
+slack_client = SlackClient("SLACK_TOKEN")
+```
+
+Edit slacksam.py and update the path to your AIML files and or compiled brain
+
+Linux:
+```python
+saiml = "/PATH/sam/aiml/"
+```
+
+Windows:
+```python
+saiml = "C:\\PATH\\sam\\aiml\\"
 ```
