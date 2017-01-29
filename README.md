@@ -101,6 +101,7 @@ sudo pip install pika
 Windows:
 ```
 python -m pip install pika
+
 ```
 
 # Running Sam
@@ -110,6 +111,7 @@ Before Sam will run, it will need to have a few edits made.
 ## Required edits
 
 Edit slacksam.py and update the Slack bot ID to your Slackbot's name
+
 
 ```python
 AT_BOT = "<@BOT_ID>"
@@ -133,7 +135,7 @@ Windows:
 saiml = "C:\\PATH\\sam\\aiml\\"
 ```
 
-## Starting Sam Up
+## Starting Sam up
 
 Running only the Slackbot fairly straightforward. You execute python and pass slacksam.py as an argument.
 
@@ -151,6 +153,37 @@ sudo /usr/bin/python slacksam.py
 Windows:
 ```cmd
 C:\PATH\python slacksam.py
+```
+
+## Adding new commands
+
+Edit slacksam.py;
+
+Using the starterbot framework we first add a command phrase constant
+
+```python
+YOUR_COMMAND = "make me a sandwich"
+```
+
+Locate the handle_command function definition. Add your command handler by appending to the handle_command.
+
+```python
+elif command.startswith(YOUR_COMMAND):
+```
+
+Locate the Help handler "elif command.startswith(HELP_COMMAND):" and add a line to explain how to use your new command.
+
+```python
+response += "*look up* <KEYWORDS> - _Experimental_ _command_ to look up a topic. \n" 
+```
+
+## Conversation bot
+
+Any text sent to the bot requires "@" in Slack. You could also add support for direct messenging if you wished. Any text that is not determined to be a command is sent on to the AIML interpreter. This is the blending of both works.
+
+```python
+else:
+        response = k.respond(command, "sam")
 ```
 
 # Screenshots
