@@ -194,6 +194,10 @@ The brain file sam.brn is a compiled and optimized binary version of the AIML fi
 
 # Screenshots
 
+![Temperature in time](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/16387949_1455459877820884_1875024577100817947_n.jpg?oh=24399e0f51dee01ff9ff173194aaac73&oe=590A04D3 "Temperature")
+
+![Temperature](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/16298878_1455459874487551_1757953412631442341_n.jpg?oh=7467160a960cd1180530696ea457e489&oe=5902940B "Temperature in time")
+
 ![Find movies](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15781271_1426701024030103_1004567059525791416_n.jpg?oh=5631d1209067cb55df9f627caadc013d&oe=5908590B "Find movies")
 
 ![Who sings](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15822923_1425939330772939_373334250003504533_n.jpg?oh=91cd46fbc394a9691ee4b08a0b42edfb&oe=58FE672E "Who sings")
