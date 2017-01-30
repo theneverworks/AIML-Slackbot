@@ -200,6 +200,30 @@ The brain file sam.brn is a compiled and optimized binary version of the AIML fi
 
 ![Pick a movie](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15873219_1425953427438196_3489926122905296987_n.jpg?oh=cfddefdfda25b1fe39910c593ea5e2d9&oe=59157F38 "Pick a movie")
 
+# What is the Message Handler?
+
+The Message Handler is ran as a service in Linux or Windows and feeds AMPQ messages from one or many exchanges into Slack as the bot. Useful for adding intelligence to other processes. There is also a Web Message Handler where we wrap the same idea in a Flask web wrapper and connect to it via GET/POST. This expands your integration capabilities to anything that can call cURL. 
+
+Imagine a scheduled task that you have running on a machine somewhere, either as a batch, CMD, or bash script. Adding a single line to your script to pass a URL to cURL sends a message to the Message Handler and is sent as a message in Slack or spoken out loud via the Announcement Service.
+
+# What is the Announcement Service?
+
+The Announcement Service watches for messages sent to a single or multiple AMPQ message queues and passes them to the Cepstral Swift speech engine to be spoken out loud in Linux or Windows, and even the Raspberry Pi.
+
+# How are you making services out of Python files?
+
+## Linux Service
+
+Linux was largely a matter of determining the init system used by the flavor of Linux you're using. I've had the most success with systemd services and will elaborate on setting up those services. I have had success with Upstart as well, but will not explain those steps. Likewise, cron jobs work though not quite as reliably as I'd like.
+
+To be continued... steps to follow.
+
+## Windows Service
+
+Windows services can be wired a few different ways. You can create a simple scheduled task but I have found a service wrapper that does everything you could want already. It's called [kohsuke](https://github.com/kohsuke "kohsuke")/[winsw](https://github.com/kohsuke/winsw "winsw") and it handles installation of the service, logging, both error and output, and gives you the ability to set recovery options. Even Slack loses connection sometimes.
+
+To be continued... steps to follow.
+
 # Design changes planned
 
 I'd like to connect the Slack Sam client to the separate socketed Sam Brain making them independent. Then the other clients, SMS, email, etc. can reuse the Brain process.
