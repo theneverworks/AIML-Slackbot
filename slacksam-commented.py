@@ -622,18 +622,20 @@ def parse_slack_output(slack_rtm_output):
     return None, None
 
 if __name__ == "__main__":
-    READ_WEBSOCKET_DELAY = 1 # 1 second delay between reading from firehose
-    if slack_client.rtm_connect():
-        brain()
-        print("sam online and connected")
-        while True:
-            command, channel = parse_slack_output(slack_client.rtm_read())
-            if command and channel:
-                print command
-                trucommand = command.replace(": ", "")
-                trucommand = trucommand.replace(":", "")
-                print channel
-                handle_command(trucommand, channel)
-            time.sleep(READ_WEBSOCKET_DELAY)
-    else:
-        print("Connection failed. Invalid Slack token or bot ID?")
+    try:
+        READ_WEBSOCKET_DELAY = 1 # 1 second delay between reading from firehose
+        if slack_client.rtm_connect():
+            brain()
+            print("sam online and connected")
+            while True:
+                command, channel = parse_slack_output(slack_client.rtm_read())
+                if command and channel:
+                    trucommand = command.replace(": ", "")
+                    trucommand = trucommand.replace(":", "")
+                    handle_command(trucommand, channel)
+                time.sleep(READ_WEBSOCKET_DELAY)
+        else:
+            print("Connection failed. Invalid Slack token or bot ID?")
+    except:
+        gethelp()
+        print "Slack connection has failed and the bot was closed."
