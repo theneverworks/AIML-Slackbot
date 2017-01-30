@@ -200,6 +200,8 @@ The brain file sam.brn is a compiled and optimized binary version of the AIML fi
 
 ![Pick a movie](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15873219_1425953427438196_3489926122905296987_n.jpg?oh=cfddefdfda25b1fe39910c593ea5e2d9&oe=59157F38 "Pick a movie")
 
+![Look up bacon](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/16388444_1455459871154218_9029149560823404069_n.jpg?oh=3c6df4cec957e393a8ebeb8a7c61a265&oe=59160716 "Look up bacon")
+
 # What is the Message Handler?
 
 The Message Handler is ran as a service in Linux or Windows and feeds AMPQ messages from one or many exchanges into Slack as the bot. Useful for adding intelligence to other processes. There is also a Web Message Handler where we wrap the same idea in a Flask web wrapper and connect to it via GET/POST. This expands your integration capabilities to anything that can call cURL. 
