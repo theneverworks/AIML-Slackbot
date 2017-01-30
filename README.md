@@ -41,6 +41,20 @@ He or she has the ability to;
 
 Anything you can script, you can enable for yourself, your team or your family and friends.
 
+# Screenshots
+
+![Temperature in time](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/16387949_1455459877820884_1875024577100817947_n.jpg?oh=24399e0f51dee01ff9ff173194aaac73&oe=590A04D3 "Temperature")
+
+![Temperature](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/16298878_1455459874487551_1757953412631442341_n.jpg?oh=7467160a960cd1180530696ea457e489&oe=5902940B "Temperature in time")
+
+![Find movies](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15781271_1426701024030103_1004567059525791416_n.jpg?oh=5631d1209067cb55df9f627caadc013d&oe=5908590B "Find movies")
+
+![Who sings](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15822923_1425939330772939_373334250003504533_n.jpg?oh=91cd46fbc394a9691ee4b08a0b42edfb&oe=58FE672E "Who sings")
+
+![Pick a movie](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15873219_1425953427438196_3489926122905296987_n.jpg?oh=cfddefdfda25b1fe39910c593ea5e2d9&oe=59157F38 "Pick a movie")
+
+![Look up bacon](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/16388444_1455459871154218_9029149560823404069_n.jpg?oh=3c6df4cec957e393a8ebeb8a7c61a265&oe=59160716 "Look up bacon")
+
 # History
 
 The definition of artificial intelligence (AI) currently refers to intelligent agents that perceive their environment and act upon that to achieve some task. What we call chat-bots, once were called stimulated response artificial intelligence. They are either weak forms of AI with some randomness overlaid a on rule based set of actions or they employ machine learning to analyze a body of conversation to attempt to learn the appropriate conversational response to a given input. As I want Sam to perform as I expect, every time, I have over fit his actionable commands. Over fitting makes the commands less adapted in dynamic situations but ensures reliability of actions taken.
@@ -191,20 +205,6 @@ You can edit the AIML files or predicate file to suite your bot requirements. Th
 # Brain file
 
 The brain file sam.brn is a compiled and optimized binary version of the AIML files themselves. It is compiled at start up and requires shutting down Sam to update it with changes.
-
-# Screenshots
-
-![Temperature in time](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/16387949_1455459877820884_1875024577100817947_n.jpg?oh=24399e0f51dee01ff9ff173194aaac73&oe=590A04D3 "Temperature")
-
-![Temperature](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/16298878_1455459874487551_1757953412631442341_n.jpg?oh=7467160a960cd1180530696ea457e489&oe=5902940B "Temperature in time")
-
-![Find movies](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15781271_1426701024030103_1004567059525791416_n.jpg?oh=5631d1209067cb55df9f627caadc013d&oe=5908590B "Find movies")
-
-![Who sings](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15822923_1425939330772939_373334250003504533_n.jpg?oh=91cd46fbc394a9691ee4b08a0b42edfb&oe=58FE672E "Who sings")
-
-![Pick a movie](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15873219_1425953427438196_3489926122905296987_n.jpg?oh=cfddefdfda25b1fe39910c593ea5e2d9&oe=59157F38 "Pick a movie")
-
-![Look up bacon](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/16388444_1455459871154218_9029149560823404069_n.jpg?oh=3c6df4cec957e393a8ebeb8a7c61a265&oe=59160716 "Look up bacon")
 
 # What is the Message Handler?
 
