@@ -14,7 +14,7 @@ import pika
 app = Flask(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
-def tell_jarvis():
+def tell_sam():
     saywhat = request.values.get('Message', None)
     message = request.args.get('s', None)
     print saywhat
@@ -39,7 +39,7 @@ def tell_jarvis():
                           body=message)
     print(" [x] Sent '" + message + "'")
     connection.close()
-    return "Sent to Sam:" + message
+    return "Sent to Sam :" + message
 
 if __name__ == "__main__":
     app.run(host='IP_ADDRESS',port=PORT,debug=True)
