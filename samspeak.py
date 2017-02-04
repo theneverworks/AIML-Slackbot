@@ -1,11 +1,12 @@
 
 ##########################################################################################
-# Sam - Home and Office Automation SRAI Windows Speech Recognition Engine
-# (Sam Windows Speech Recognition Engine)
+# Sam - Home and Office Automation Speech Recognition and Synthesis Engine for Windows
+# (Sam Speech Recognition and Synthesis Engine for Windows)
 #
 # Version 1.0
 # 
 # Accepts spoken input utilizing Windows Speech Recognition capabilities.
+# REQUIRES IronPython!
 #
 ##########################################################################################
 
