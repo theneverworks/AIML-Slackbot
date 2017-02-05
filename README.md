@@ -85,6 +85,10 @@ NOTE: Installations should be performed "as administrator" in Windows or using "
 
 NOTE: You may have to include the full path to python if you didn't include Python in your PATH environment variables.
 
+## Windows Only Items and IronPython
+
+The intended design is to make a cross platform solution. That being said, each operating system offers different capabilities that we wish to capitalize on. Some components, such as SamSpeak.py, only run on Windows as they utilize the Windows speech recognition engine. Further, SamSpeak.py requires IronPython 2.7.x http://ironpython.net/.
+
 ## Installing the required Py-AIML
 
 Linux:
