@@ -228,9 +228,57 @@ The Announcement Service watches for messages sent to a single or multiple AMPQ 
 
 ## Linux Service
 
-Linux was largely a matter of determining the init system used by the flavor of Linux you're using. I've had the most success with systemd services and will elaborate on setting up those services. I have had success with Upstart as well, but will not explain those steps. Likewise, cron jobs work though not quite as reliably as I'd like.
+Linux is largely a matter of determining the init system used by the flavor of Linux you're using. I've had the most success with systemd services and will elaborate on those up. I have had success with Upstart as well, but will not explain those steps. Likewise, cron jobs work though not quite as reliably as I'd like.
 
-To be continued... steps to follow.
+Note:  I prefer nano as my Linux terminal text file editor. There are many others and you may use the one that you love. Just replace `nano` with the editor of your choice.
+
+To create a systemd service, create a file (or copy one from the source code and edit it) in the systemd directory.  Replace `NAME` with the service name you'd like to use. In this example below, calling the editor with the filename of a file that does not exist, creates a new unsaved file with that name.
+
+```bash
+sudo nano NAME.service
+```
+
+Example: `sudo nano sam.service`
+
+Add a unit description, that's our service name.  Set the working directory to the path of your Python file.  Set the path of the Python file that is to run as your service.  Setting `Restart=always` assures that the service will auto start and auto restart after failure.  Set the system log identifier to a name that is unique.  Take the other values as provided. Without going into great detail, they establish permissions, logging, and our installation.
+
+```bash
+[Unit]
+Description=Slack Client
+[Service]
+WorkingDirectory=/path
+ExecStart=/usr/bin/python /path/slacksam.py
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=slackclient
+User=root
+Group=root
+[Install]
+WantedBy=multi-user.target
+```
+
+It may be necessary to set or update permissions on your new service file. I have read where some flavors of Linux require it. With Raspbian I did not have to. 
+
+Example: `sudo chmod u+rwx /etc/systemd/system/NAME.service`
+
+Next you'll need to enable the service, which is where the `WantedBy=` line came in earlier. To enable the newly defined service use  system control enable.
+
+```bash
+sudo systemctl enable NAME.service
+```
+
+Once your service has been enabled, it's ready to be started.
+
+```bash
+sudo systemctl start NAME.service
+```
+
+Use the stop parameter to stop the service.
+
+```bash
+sudo systemctl stop NAME.service
+```
 
 ## Windows Service
 
