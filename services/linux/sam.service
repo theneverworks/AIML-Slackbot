@@ -1,0 +1,14 @@
+[Unit]
+Description=Sam
+[Service]
+WorkingDirectory=/path
+ExecStart=/usr/bin/python /path/brain.py
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=sam
+User=root
+Group=root
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,14 @@
+[Unit]
+Description=Slack Client
+[Service]
+WorkingDirectory=/path
+ExecStart=/usr/bin/python /path/slacksam.py
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=slackclient
+User=root
+Group=root
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,14 @@
+[Unit]
+Description=Message Handler
+[Service]
+WorkingDirectory=/path
+ExecStart=/usr/bin/python /path/messagehandler.py
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=messagehandler
+User=root
+Group=root
+[Install]
+WantedBy=multi-user.target
+
