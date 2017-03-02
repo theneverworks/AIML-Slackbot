@@ -19,9 +19,6 @@ from System.Speech.Recognition import (SpeechRecognitionEngine, GrammarBuilder,
 clr.AddReference('System.Speech')
 from System.Speech.Synthesis import SpeechSynthesizer
 
-count = 0
-lastsaid = ''
-
 
 def main():
     sre = SpeechRecognitionEngine()
@@ -30,7 +27,7 @@ def main():
     spk = SpeechSynthesizer()
 
     gb = GrammarBuilder()
-    gb.Append(Choices('sam'))
+    gb.Append("sam")
     gb.AppendDictation()
     sre.LoadGrammar(Grammar(gb))
 
@@ -39,7 +36,7 @@ def main():
     def OnSpeechRecognized(sender, e):
         sre.RecognizeAsyncStop()
         if ((e.Result.Text[:3] == 'sam')):
-            print 'Heard: %s' % (e.Result.Text[4:])
+            print 'Heard: %s' % (e.Result.Text)
             try:
                 # Connect to server and send data
                 try:
