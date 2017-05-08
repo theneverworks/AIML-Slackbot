@@ -49,15 +49,15 @@ Anything you can script, you can enable for yourself, your team or your family a
 
 ![Temperature in time](http://theneverworks.com/images/github/tempintime.jpg "Temperature in time")
 
-![Bus locator](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/16406426_1455498684483670_3118021600656248642_n.jpg?oh=11ff9959b84491e9af43eceb33df469f&oe=5906EA1A "Bus locator")
+![Bus locator](http://theneverworks.com/images/github/locatebus.jpg "Bus locator")
 
-![Find movies](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15781271_1426701024030103_1004567059525791416_n.jpg?oh=5631d1209067cb55df9f627caadc013d&oe=5908590B "Find movies")
+![Find movies](http://theneverworks.com/images/github/findmovies.jpg "Find movies")
 
-![Who sings](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15822923_1425939330772939_373334250003504533_n.jpg?oh=91cd46fbc394a9691ee4b08a0b42edfb&oe=58FE672E "Who sings")
+![Who sings](http://theneverworks.com/images/github/whosings.jpg "Who sings")
 
-![Pick a movie](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/15873219_1425953427438196_3489926122905296987_n.jpg?oh=cfddefdfda25b1fe39910c593ea5e2d9&oe=59157F38 "Pick a movie")
+![Pick a movie](http://theneverworks.com/images/github/pickamovie.jpg "Pick a movie")
 
-![Look up bacon](https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/16388444_1455459871154218_9029149560823404069_n.jpg?oh=3c6df4cec957e393a8ebeb8a7c61a265&oe=59160716 "Look up bacon")
+![Look up bacon](http://theneverworks.com/images/github/lookupbacon.jpg "Look up bacon")
 
 # History
 
