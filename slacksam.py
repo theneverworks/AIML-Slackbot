@@ -2,7 +2,7 @@
 # Sam - Home and Office Automation SRAI
 # (SlackSam)
 #
-# Version 1.0
+# Version 1.1
 # 
 # Py-AIML or PyAIML Interpreter Personality Slackbot
 # Used for both home automation and office automation
@@ -34,6 +34,10 @@ import csv
 
 # slackbot's ID
 BOT_ID = "sam"
+# list the direct message channels that you would like to allow direct messaging from, use the channel spy tool
+BOTCHANNELS = "DABCDEFGHD12345678"
+# list the users that are able to execute secured functions all users are default level 1, this gives them level 2
+ALLOWED = "<@U12345678><@UABCDEFGH>"
 
 # constants
 AT_BOT = "<@BOT_ID>"
@@ -132,8 +136,21 @@ def brain():
         setpreds()
     k.saveBrain(saiml + "sam.brn")
 
+    
+def get_user_name(userinfo):
+    # update with your BOT ID
+    if userinfo != 'U12345678':
+        # update with your Slack Token
+        f = urllib2.urlopen('https://slack.com/api/users.info?user=' + userinfo + '&token=<PUT_YOUR_TOKEN_HERE>')
+        json_string = f.read()
+        parsed_json = json.loads(json_string)
+        realname = parsed_json['user']['profile']['first_name']
+        return realname
+    return "Sam"
+    
 # based on the slack-starterbot
-def handle_command(command, channel):
+# now available for use, security level and user's real name for personalization
+def handle_command(command, channel, user, seclvl, realname):
     """
         Receives commands directed at the bot and determines if they
         are valid commands. If so, then acts on the commands. If not,
@@ -141,7 +158,7 @@ def handle_command(command, channel):
     """
     response = "Not sure what you mean. Use the *" + EXAMPLE_COMMAND + \
                "*"
-    if command.startswith(EXAMPLE_COMMAND):
+    if (command.startswith(EXAMPLE_COMMAND) and seclvl >= 1):
         response = "Sure...write some more code then I can do that!"
     elif command.startswith(HELP_COMMAND):
         try:
@@ -178,19 +195,28 @@ def gethelp():
         print "Failed to send help email"
 
 def parse_slack_output(slack_rtm_output):
-    """
-        The Slack Real Time Messaging API is an events firehose.
-        this parsing function returns None unless a message is
-        directed at the Bot, based on its ID.
-    """
     output_list = slack_rtm_output
     if output_list and len(output_list) > 0:
         for output in output_list:
-            if output and 'text' in output and AT_BOT in output['text']:
-                # return text after the @ mention, whitespace removed also .lower() removed from Matt's starter code
+            if ((output and 'text' in output) and (AT_BOT in output['text'])):
+                if (output['user'] in ALLOWED):
+                    seclvl = 2
+                else:
+                    seclvl = 1
                 return output['text'].split(AT_BOT)[1].strip(), \
-                       output['channel']
-    return None, None
+                       output['channel'], \
+                       output['user'], \
+                       seclvl
+            if ((output and 'text' in output) and (output['channel'] in BOTCHANNELS)):
+                if (output['user'] in ALLOWED):
+                    seclvl = 2
+                else:
+                    seclvl = 1
+                return output['text'], \
+                       output['channel'], \
+                       output['user'], \
+                       seclvl
+    return None, None, None, None
 
 if __name__ == "__main__":
     try:
@@ -198,13 +224,20 @@ if __name__ == "__main__":
         if slack_client.rtm_connect():
             brain()
             print("sam online and connected")
-            while True:
-                command, channel = parse_slack_output(slack_client.rtm_read())
-                if command and channel:
-                    trucommand = command.replace(": ", "")
-                    trucommand = trucommand.replace(":", "")
-                    handle_command(trucommand, channel)
-                time.sleep(READ_WEBSOCKET_DELAY)
+        while True:
+            command, channelo, usero, seclvl = parse_slack_output(slack_client.rtm_read())
+            if command and channelo:
+                #print "Message: " + command
+                #print "User: " + usero
+                realname = get_user_name(usero)
+                print "Real Name: " + realname
+                # removes the colon inserted by the mobile app
+                trucommand = command.replace(": ", "")
+                trucommand = trucommand.replace(":", "")
+                # update your bot's ID to it doesn't talk to itself
+                if usero != 'U12345678':
+                    handle_command(trucommand, channelo, usero, seclvl, realname)
+            time.sleep(READ_WEBSOCKET_DELAY)
         else:
             print("Connection failed. Invalid Slack token or bot ID?")
     except:
