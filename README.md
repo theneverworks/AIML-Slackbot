@@ -1,6 +1,3 @@
-# DISCLAIMER: 
-I did not personally write many of the components that I am using. I am standing on the shoulders of many other’s fine work. I’ve merely created an orchestration that I wish to share.
-
 Based on the [mattmakai](https://github.com/mattmakai "mattmakai")/[slack-starterbot](https://github.com/mattmakai/slack-starterbot "slack-starterbot")
 author: Matt Makai (matthew.makai@gmail.com) web: http://www.mattmakai.com/
 https://www.fullstackpython.com/blog/build-first-slack-bot-python.html
